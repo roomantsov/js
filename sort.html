@@ -57,6 +57,7 @@
 			// Проверка на пробелы
 			var checked = document.getElementById('input').value.replace(/  /g," ");
 			checked = checked.replace(/^ /, "");
+            checked = checked.replace(/([a-zA-Zа-яА-Я\!\"\№\;\%\:\?\*\(\)\_\+\-\=])/g, "");
 			document.getElementById('input').value = checked;
 		}
 
@@ -66,18 +67,23 @@
 			var symbols = document.getElementById('input').value.split(' ');
 			for (var i = 0; i < symbols.length; i++){
 				output += '<td id="td_'+i+'">'+symbols[i]+'</td>';
+                
 				// Genius code start's here >>>
 				// Проверяем на число, т.к. результатом деления неЧисла на любое чило будет NaN
 				if(isNaN((symbols[i]+1/*+1 для того чтоб если был введен + или -, то дождатся следующего числа*/)/10)){
 					alert('error of input data');
 					document.getElementById('input').value = '';
+                    document.getElementById('tr').innerHTML = '';
+                    
 					return;
 				}
 				// end of genius code >>>
+                
 			}
 			document.getElementById('tr').innerHTML = output;
 			return true;
 		}
+        // Массивы рисования
 		for_drow = [];
 		drow_back = [];
 		function sort(){
@@ -128,7 +134,8 @@
 			document.getElementById('tr').innerHTML = '';
 		}
 
-		//for test
+        
+		//functions for test
 		function sort_test(arr){
 			current = arr;
 			for( var position = 0 ; position < current.length; position++){
