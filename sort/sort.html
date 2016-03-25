@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-		<head><!-- подключаем стили Mocha, для отображения результатов -->
+		<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
-		<!-- подключаем библиотеку Mocha -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
-		<!-- настраиваем Mocha: предстоит BDD-тестирование -->
-		<script>
-			mocha.setup('bdd');
-		</script>
-		<!-- подключаем chai -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
-		<!-- в chai есть много всего, выносим assert в глобальную область -->
-		<script>
-			var assert = chai.assert;
-		</script>
 		<title>Title Page</title>
 		<style>
 		tr, td{
@@ -135,22 +122,5 @@
 		}
 
         
-		//functions for test
-		function sort_test(arr){
-			current = arr;
-			for( var position = 0 ; position < current.length; position++){
-				if((current[position+1] - current[position]) < 0){
-					t = current[position];
-					current[position] = current[position+1];
-					current[position+1] = t;
-					break;
-				}
-			}
-			return current.join(',');	
-		}
 	</script>
-	<script src="test.js"></script>
-	<script>
-    	mocha.run();
-  	</script>
 </html>

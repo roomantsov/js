@@ -1,0 +1,77 @@
+body{
+    background-color: darkslategray;
+}
+
+.calculator{
+    position: relative;
+    top: 100px;
+}
+
+.wrapper{
+    margin: 0 auto;
+}
+
+.calculator{
+    margin: 0 auto;
+}
+
+.calculator_box{
+    margin: 0 auto;
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    border-bottom: 4px solid seagreen;
+    background-color: mediumseagreen;
+    transition: all 0.2s linear;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: seagreen;
+    border-bottom: 1px solid darkgreen;
+    color: white;
+}
+
+
+.poligon{
+    height: 40px;
+    width: 144px;
+    padding: 3px 7px;
+    font-size: 15px;
+}
+
+.res {
+    width: 213px;
+    height: 43px;
+    border: 0px solid mediumseagreen;
+    border-bottom: 4px solid seagreen;
+    background-color: mediumseagreen;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.result {
+    width: 105px;
+}
+
+input{
+    font-family: calibri;
+    font-size: 18px!important;
+    font-weight: bold;
+}
+
+#poligon{
+    border: 0px;
+    border-bottom: 4px solid seagreen;
+    background-color: mediumseagreen;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.res:hover, #poligon:hover{
+    /*border-bottom: 4px solid mediumseagreen;*/
+    background-color: seagreen;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+           <form method="post">
+            <table class="calculator_box">
+                <tr class="head">
+                    <td colspan="3">
+                        <input id="poligon" type="text" class="poligon" name="poly" onkeyup="control();" placeholder="">
+                    </td>
+                    <td>
+                        <input type="button" class="button divide" onclick="divide()" value="/">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(1)" value="1" />
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(2)" value="2"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(3)" value="3"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button plus" onclick="plus()" value="+" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(4)" value="4"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(5)" value="5"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(6)" value="6"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button minus" onclick="minus()" value="-"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(7)" value="7"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(8)" value="8"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button digit" onclick="add(9)" value="9"/>
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button plus" onclick="multiplication()" value="x"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="button_holder">
+                        <input type="button" class="button clear" onclick="clr()" value="C">
+                    </td>
+                    <td class="button_holder">
+                        <input type="button" class="button zero" onclick="zero()" value="0" />
+                    </td>
+                    <td colspan="2" class="button_holder">
+                        <input type="button" class="button result" onclick="calculation();" value="=" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+						<input style="text-align : center" type="text" id="res" class="res" value="">
+                    </td>
+                </tr>
+            </table>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- JavaScript --!>
+    <script type="text/javascript" src="js/control.js"></script>
+    <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/calc.js"></script>
+</body>
+</html>
